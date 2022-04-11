@@ -26,6 +26,7 @@ padding: 0px 100px;
 
 h1{
     display: block;
+    text-align: center;
     font-size: 60px;
     margin-block-start: 10px;
     margin-block-end: 10px;

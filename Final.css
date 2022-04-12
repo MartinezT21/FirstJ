@@ -172,3 +172,63 @@ font-weight: 300;
 margin-top: 30px;
 margin-right: 40px;
 }
+
+.BoxHis{
+    display: flex;
+    flex-direction:row ;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+
+.BoxHis2{
+    display: flex;
+    flex-direction:row ;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.BoxHis3{
+    display: flex;
+    flex-direction:row ;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+
+
+#BoxText1{
+    width: 795px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+#BoxText2{
+    width: 790px;
+    text-align: left;
+    margin-right: 200px;
+}
+
+
+.BoxText3{
+    text-align: left;
+}
+
+#TheBox3{
+    display: grid;
+}
+
+#Tit1{
+    width: 1000px;
+}
+
+#Leng{
+    margin-left: 80px;
+}
+
+#VidT{
+    margin-top:400px;
+}

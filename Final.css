@@ -3,13 +3,14 @@ body{
     background-size: cover;
 }
 header{
+    background-size:cover;
+background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-image:url("../Imagenes/codigo.jpeg");
+    background-image:url("../Info-Trabajo-Final/assets/imagenes/codigo.jpeg");
    min-height: 500px;
-background-size:cover;
-background-attachment: fixed;
+
 padding: 0px 100px;
 
 }
@@ -37,7 +38,7 @@ h1{
     color: #F0F5E4;
     font-family: 'Montserrat', sans-serif;
     text-shadow: 4px 4px black;
-    width: 825px;
+    width: 875px;
 }
 
 h2{
@@ -52,13 +53,17 @@ h2{
 }
 h3{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-left: 30px;
+    margin-left: 60px;
     text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
 
 }
 footer{
     background-color: #1d1d1d;
     height: 80px;
+    display: flex;
+    justify-content: space-between;
 }
 #boxfoot{
     display: flex;
@@ -89,7 +94,7 @@ width: 100%;
 margin: 100px;
 }
 
-p{
+*{
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -143,13 +148,27 @@ p{
 #botH{
 float: right;
 display: flex;
+justify-content: space-evenly;
+gap: 10px;
 width: 340px;
+margin-top: 20px;
 }
 
 .botonesDeH{
-height: 40px;
+height: 42px;
 flex-direction: row;
-width: 100px;
+width: 110px;
 border-radius: 10px;
-font-size: 15px;
+font-size: 17px;
+box-shadow: 1px 0.5px;
+background-color: #F0F5E4;
+font-weight: 300;
+}
+
+#textFot{
+
+    color:white;
+  display: block;
+margin-top: 30px;
+margin-right: 40px;
 }

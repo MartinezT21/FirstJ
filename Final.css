@@ -64,6 +64,7 @@ footer{
     height: 80px;
     display: flex;
     justify-content: space-between;
+    margin-top: 300px;
 }
 #boxfoot{
     display: flex;
@@ -232,4 +233,49 @@ margin-right: 40px;
 
 #VidT{
     margin-top:400px;
+}
+
+video{
+border: black solid 2px;
+object-fit: contain;
+}
+section{
+    width: 70%;
+    height: 950px;
+    background-color: black;
+    padding: 5px;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1300px;
+}
+
+#BotMen{
+  
+    background-color: #1d1d1d;
+    height: 50px;
+    border-radius: 10px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+}
+#BotSec{
+    display: flex;
+    gap: 20px;
+}
+
+.Bots{
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: #154454 2px 1px;
+    background-color: #F0F5E4;
+}
+
+#textVid{
+margin-left: 932px;
+color: white;
+padding-top: 30px;
 }

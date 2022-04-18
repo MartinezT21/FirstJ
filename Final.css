@@ -29,10 +29,7 @@ h1{
     display: block;
     text-align: center;
     font-size: 60px;
-    margin-block-start: 10px;
-    margin-block-end: 10px;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin: 0 10px;
     font-weight: bold;
     background-color: #2D2D2D;
     color: #F0F5E4;
@@ -162,7 +159,7 @@ flex-direction: row;
 width: 110px;
 border-radius: 10px;
 font-size: 17px;
-box-shadow: 1px 0.5px;
+box-shadow: 2px 2px #154454;
 background-color: #F0F5E4;
 font-weight: 300;
 }
@@ -278,4 +275,31 @@ article{
 margin-left: 932px;
 color: white;
 padding-top: 30px;
+}
+
+.BoxesRomp{
+width: 300px;
+text-align: center;
+background-color: grey;
+border: black solid 2px;
+height: 400px;
+display: inline-block;
+}
+
+#BoxRomp{
+    display: flex;
+   flex-direction: row;
+}
+
+#Rompe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#ImgBox{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 30px;
 }

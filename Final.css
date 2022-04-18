@@ -14,7 +14,9 @@ background-attachment: fixed;
 padding: 0px 100px;
 
 }
-
+button{
+    border: 0.5px 2px
+}
 #Logo{
     width: 200px;
     height: 84px;
@@ -56,6 +58,10 @@ h3{
     margin-top: 20px;
 
 }
+
+#h23{
+    margin-top: 200px;
+}
 footer{
     background-color: #1d1d1d;
     height: 80px;
@@ -95,7 +101,7 @@ padding-bottom: 100px;
 
 *{
     font-family: 'Montserrat', sans-serif;
-
+    text-decoration:none;
 }
 
 #textARS{
@@ -122,12 +128,12 @@ padding-bottom: 100px;
 
 #botonesAS1{
   background-color: #427E80;
-    width: 160px;
+    width: 100px;
     height: 38px;
     border-radius: 10px 10px 10px 10px;
     color: white;
     font-size: 16px;
-    box-shadow: 1px 1px #154454;
+    box-shadow: 2px 3px #154454;
     margin-bottom: 20px;
 
 }
@@ -163,6 +169,7 @@ box-shadow: 2px 2px #154454;
 background-color: #F0F5E4;
 font-weight: 300;
 }
+
 
 #textFot{
 
@@ -269,6 +276,7 @@ article{
     border-radius: 10px;
     box-shadow: #154454 2px 1px;
     background-color: #F0F5E4;
+    font-weight: 300;
 }
 
 #textVid{
@@ -295,6 +303,7 @@ display: inline-block;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 0;
 }
 
 #ImgBox{
@@ -302,4 +311,17 @@ display: inline-block;
     flex-direction: row;
     gap: 10px;
     margin-top: 30px;
+}
+
+#Reset{
+    margin-top: 50px;
+    padding: 10px 100px;
+    text-align: center;
+    box-shadow: 2px 3px #154454;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: #F0F5E4;
+    color: #154454;
+    font-weight: 300;
+  
 }

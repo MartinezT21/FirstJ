@@ -1,5 +1,6 @@
 
 
+
 let videos = document.getElementsByTagName('video');
 
 
@@ -17,4 +18,6 @@ function Pause() {
         video.pause(); 
     }
 };
+
+
 

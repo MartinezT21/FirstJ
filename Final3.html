@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Final.css">
-    <script src="./Final.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -31,8 +30,8 @@
           
     </header>
 <main>
-    <h2>Armemos el rompecabezas y veamos que imagen es...</h2>
-    <article id="Rompe">
+    <h2 id="h23">Armemos el rompecabezas y veamos que imagen es...</h2>
+    <div id="Rompe">
     <div id="BoxRomp">
 <div class="BoxesRomp">        
 <p   class=" textRomp">
@@ -59,18 +58,17 @@
 </div>
 
 <div id="ImgBox">
-  <img src="../Info-Trabajo-Final/assets/imagenes/Rompe2.png">
+  <img id="DragImgs" src="../Info-Trabajo-Final/assets/imagenes/Rompe2.png"  >
 
-  <img src="../Info-Trabajo-Final/assets/imagenes/Rompe1.png">
+  <img class="DragImgs" src="../Info-Trabajo-Final/assets/imagenes/Rompe1.png" >
 
 
-  <img src="../Info-Trabajo-Final/assets/imagenes/Rompe3.png">
+  <img  class="DragImgs" src="../Info-Trabajo-Final/assets/imagenes/Rompe3.png" >
 </div>
-<button id="Reset" class="Bots">reiniciar
+<button id="Reset">Reiniciar
 </button >
 
-</article>
-
+</div>
 </main>
     <footer>
         <div id="boxfoot">
@@ -90,3 +88,56 @@
     </footer>
 </body>
 </html>
+
+
+
+<script>
+
+    const tacho = document.querySelector('.BoxesRomp');
+
+const foto = document.querySelector('#DragImgs');
+foto.addEventListener('dragstart',(evento)=>{
+    console.log('Drageado')
+    evento.dataTransfer.setData("URL","../Info-Trabajo-Final/assets/imagenes/Rompe2.png")
+
+    console.log(evento.dataTransfer)
+});
+
+foto.addEventListener('dragend',(evento)=>{
+    console.log('Se Solto')
+});
+
+
+foto.addEventListener('drag',(evento)=>{
+});
+
+
+tacho.addEventListener('drop',(evento)=>{
+    console.log('Drop');
+
+
+
+    let dato = evento.dataTransfer.getData("URL");
+
+let pieza = document.createElement("img");
+
+pieza.setAttribute('src', dato);
+
+tacho.appendChild(pieza);
+
+
+});
+
+tacho.addEventListener('dragleave',(evento)=>{
+    console.log('Salida')
+});
+
+tacho.addEventListener('dragover',(evento)=>{
+    evento.preventDefault();
+
+
+});
+
+
+
+</script>

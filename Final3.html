@@ -93,7 +93,7 @@
 
 <script>
 
-    const tacho = document.querySelector('.BoxesRomp');
+    const contenedor = document.querySelector('.BoxesRomp');
 
 const foto = document.querySelector('#DragImgs');
 foto.addEventListener('dragstart',(evento)=>{
@@ -102,17 +102,15 @@ foto.addEventListener('dragstart',(evento)=>{
 
     console.log(evento.dataTransfer)
 });
-
-foto.addEventListener('dragend',(evento)=>{
+contenedor.addEventListener('dragend',(evento)=>{
     console.log('Se Solto')
 });
 
-
-foto.addEventListener('drag',(evento)=>{
+contenedor.addEventListener('drag',(evento)=>{
 });
 
 
-tacho.addEventListener('drop',(evento)=>{
+contenedor.addEventListener('drop',(evento)=>{
     console.log('Drop');
 
 
@@ -123,16 +121,16 @@ let pieza = document.createElement("img");
 
 pieza.setAttribute('src', dato);
 
-tacho.appendChild(pieza);
+contenedor.appendChild(pieza);
 
 
 });
 
-tacho.addEventListener('dragleave',(evento)=>{
+contenedor.addEventListener('dragleave',(evento)=>{
     console.log('Salida')
 });
 
-tacho.addEventListener('dragover',(evento)=>{
+contenedor.addEventListener('dragover',(evento)=>{
     evento.preventDefault();
 
 

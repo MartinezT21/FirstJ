@@ -9,8 +9,29 @@
 </head>
 <body>
     <nav>
-        <!-- Logo usado para practiar la posicion del SVG en un futuro-->
-        <a href="./Final.html"> <img id="Logo" src="../Info-Trabajo-Final/assets/imagenes/logo.svg"> </a>
+        <a href="./Final.html">
+            <svg width="200" height="80">
+       
+           <rect x="45" y="5" width="60" height="35" rx="5" fill="#3F6797" id="quad1"
+           > 
+           </rect>
+           <rect x="50" y="10" width="50" height="25" rx="5" fill="#B1D5E4" id="quad2"
+           >
+           </rect>
+           <polygon points="55 45,95 45,120 62,35 62" fill="#3F6797" id="pol1">
+           </polygon>
+           <polygon points="57 48,92 48,104 57,45 57" fill="#B1D5E4" id="pol2">
+           </polygon>
+       
+       
+       
+       
+       
+       
+       
+       
+       
+           </svg> 
      <div id="botH">
        <a href="./Final2.html"> <button class="botonesDeH"  >
            HISTORIA
@@ -33,21 +54,21 @@
     <h2 id="h23">Armemos el rompecabezas y veamos que imagen es...</h2>
     <div id="Rompe">
     <div id="BoxRomp">
-<div class="BoxesRomp">        
+<div class="BoxesRomp" id="Box1">        
 <p   class=" textRomp">
     Arrastre y suelte la imágen aquí
 </p>    
 
 </div>
 
-<div class="BoxesRomp"> 
+<div class="BoxesRomp" id="Box2"> 
 <p  class=" textRomp">
     Arrastre y suelte la imágen aquí
 </p>    
 
 </div>
 
-<div class="BoxesRomp">
+<div class="BoxesRomp" id="Box3">
 
 <p  class=" textRomp">
     Arrastre y suelte la imágen aquí
@@ -58,7 +79,7 @@
 </div>
 
 <div id="ImgBox">
-  <img id="DragImgs" src="../Info-Trabajo-Final/assets/imagenes/Rompe2.png"  >
+  <img id="DragImgs1" src="../Info-Trabajo-Final/assets/imagenes/Rompe2.png"  >
 
   <img class="DragImgs" src="../Info-Trabajo-Final/assets/imagenes/Rompe1.png" >
 
@@ -93,49 +114,36 @@
 
 <script>
 
-    const contenedor = document.querySelector('.BoxesRomp');
+    const Zona1 = document.querySelector('#Box1');
 
-const foto = document.querySelector('#DragImgs');
-foto.addEventListener('dragstart',(evento)=>{
-    console.log('Drageado')
-    evento.dataTransfer.setData("URL","../Info-Trabajo-Final/assets/imagenes/Rompe2.png")
-
-    console.log(evento.dataTransfer)
-});
-contenedor.addEventListener('dragend',(evento)=>{
-    console.log('Se Solto')
-});
-
-contenedor.addEventListener('drag',(evento)=>{
-});
+    let Piece1 = document.querySelector('#DragImgs1');
 
 
-contenedor.addEventListener('drop',(evento)=>{
-    console.log('Drop');
+Piece1.addEventListener('dragstart' ,IniciarTraslado);
+
+Piece1.addEventListener('dragend' ,FinTraslado);
 
 
 
-    let dato = evento.dataTransfer.getData("URL");
+function IniciarTraslado(evento) {
+    evento.dataTransfer.setData('Text',"../Info-Trabajo-Final/assets/imagenes/Rompe1.png")
+}
 
-let pieza = document.createElement("img");
-
-pieza.setAttribute('src', dato);
-
-contenedor.appendChild(pieza);
-
-
-});
-
-contenedor.addEventListener('dragleave',(evento)=>{
-    console.log('Salida')
-});
-
-contenedor.addEventListener('dragover',(evento)=>{
-    evento.preventDefault();
+function FinTraslado(event) {
+    console.log("Fin")
+}
+Zona1.addEventListener('dragover',prevenir);
 
 
-});
+Zona1.addEventListener('drop', Soltar)
 
+function Soltar(evento){
+    let DataPiece1 = evento.dataTransfer.setData('Text')
+   Zona1.innerHTML=`<img id="Box1" src="${DataPiece1}">`
+}
 
+function prevenir(evento){
+     evento.preventDefault()
+}
 
 </script>

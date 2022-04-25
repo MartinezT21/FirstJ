@@ -325,3 +325,51 @@ display: inline-block;
     font-weight: 300;
   
 }
+
+
+rect#quad2, polygon#pol2{
+    animation: pop;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: pop;
+    animation-iteration-count: 1;
+}
+
+rect#quad1, polygon#pol1{
+    animation: pop;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: pop;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes pop{
+
+0%{
+    transform: translate(0,-10);
+    opacity: 0;
+}
+50%{
+    transform: translate(0,-10px);
+    opacity: 0;
+}
+100%{
+    transform: translate(0,0px);
+    opacity: 1;
+}
+}
+
+#svgBot2{
+  margin-top: 30px;
+}
